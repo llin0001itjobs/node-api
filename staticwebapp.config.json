@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/index.js",
+      "statusCode": 200
+    }
+  ],
+  "build": {
+    "command": "npm run build",
+    "outputPath": "build",
+    "postBuildCommand": "npm run postbuild",
+    "environmentVariables": {
+      "NODE_ENV": "production"
+    }
+  }
+}

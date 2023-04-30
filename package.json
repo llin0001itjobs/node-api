@@ -4,6 +4,7 @@
   },
   "engines": {
 	      "package": "package.json@1.0.0",
+		  "node": "18.14",
     "required": {
       "npm": "<=9.5.1",
       "node": "<=18.4.2"
@@ -19,6 +20,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+	"build:azure": "npm run build", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
