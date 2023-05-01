@@ -10,11 +10,16 @@
     <h1>Node API App</h1>    
 	<p>Server running on port 8000</p>
     <ul>
-		<li>https://<span><script>window.location.href</script></span>:8000/api/coin</li>
-		<li>https://<span><script>window.location.href</script></span>:8000/api/dog</li>
-		<li>https://<span><script>window.location.href</script></span>:8000/api/hello?name=Billie</li>
-		<li>https://<span><script>window.location.href</script></span>:8000/api/north</li>
-		<li>https://<span><script>window.location.href</script></span>:8000/api/north/actuator</li>		
+		<script>
+			var url = window.location.href;
+			const list = ['coin','dog','hello?name=Billie','north/api','north/actuator'];
+			for (key in list) {
+				var str = 'https://' + url + '/api/' + key;
+				document.write('<li>');
+				document.write(str);
+				document.write('</li>');
+			}			
+		</script>
     </ul>
   </body>
 </html>
